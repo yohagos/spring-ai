@@ -1,1 +1,1 @@
-# Spring AI with Gemini
+# Spring AI with Ollama - DeepSeek-R1
