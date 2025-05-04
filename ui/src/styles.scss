@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./theme-colors.scss" as theme;
+
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+
+:root {
+  @include mat.toolbar-overrides((
+    container-background-color: map.get(theme.$primary-palette, 50),
+    container-text-color: white,
+  ));
+}
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: theme.$primary-palette,
+        tertiary: theme.$tertiary-palette,
+      ),
+      typography: Roboto,
+      density: 0
+    )
+  );
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
